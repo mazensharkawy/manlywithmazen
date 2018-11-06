@@ -36,7 +36,7 @@ class VideoCard extends React.PureComponent {
         onClick={this.handleOnClick}
       >
         <img
-          onClick="handleOnClick"
+          onClick={this.handleOnClick}
           style={{ maxHeight: "250px" }}
           alt="robots"
           src={img}
