@@ -1,5 +1,26 @@
 {
-  "done": [],
+  "done": [
+    {
+      "assignedTo": {
+        "name": "Mazen Sharkawy"
+      },
+      "creation_time": "2018-11-06T12:22:13.392Z",
+      "id": "2",
+      "prio": 2,
+      "references": [],
+      "title": "git repo for the record"
+    },
+    {
+      "assignedTo": {
+        "name": "Mazen Sharkawy"
+      },
+      "creation_time": "2018-11-06T12:40:34.441Z",
+      "id": "3",
+      "prio": 2,
+      "references": [],
+      "title": "redirect to hompage"
+    }
+  ],
   "in-progress": [],
   "testing": [],
   "todo": [
@@ -15,16 +36,6 @@
       "id": "1",
       "references": [],
       "title": "Push notifications"
-    },
-    {
-      "assignedTo": {
-        "name": "Mazen Sharkawy"
-      },
-      "creation_time": "2018-11-06T12:22:13.392Z",
-      "id": "2",
-      "prio": 2,
-      "references": [],
-      "title": "git repo for the record"
     }
   ]
 }

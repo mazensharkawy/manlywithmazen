@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import styled from "styled-components";
+import { Redirect } from "react-router";
 
 const SidebarItem = styled.a`
     height: 50px;
@@ -151,6 +152,9 @@ export default class Dash extends React.PureComponent {
               </Sidebar>
               <Content>
                 <Switch>
+                  <Route exact path="/" render={() => (
+                    <Redirect to="/home-page" />
+                  )} />
                   {this.props.routes.map(route => (
                     <Route key={route.key}
                       // {...props}

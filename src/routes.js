@@ -6,7 +6,7 @@ export default [
   {
     label: "Home Page",
     component: HomePage,
-    path: "/homePage"
+    path: "/home-page"
   },
   {
     label: "Preview",
