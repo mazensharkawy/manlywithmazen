@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import styled from "styled-components";
 import { Redirect } from "react-router";
+import Navbar from "../components/Navbar"
 
 const SidebarItem = styled.a`
     height: 50px;
@@ -25,6 +26,14 @@ const Root = styled.div`
   display: flex;
   flex-flow: column nowrap;
 `;
+const Logo = styled.label`
+  width: ${props => (props.isOpened ? "220px" : "0px")};
+  height: 56px;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #222;
+  font-weight: bold;
+`;
 const Container = styled.div`
     display: flex;
     flex-flow: row nowrap;
@@ -35,47 +44,28 @@ const Container = styled.div`
     overflow-y:auto;
     background-color:rgba(0,0,0,.1);
 `;
-
-const Navbar = styled.div`
-    background:grey;
-    color:#222;
-    width:100%:
-    height:56px;
-    min-height:56px;
-    overflow: hidden;
-    display:flex;
-`;
-const Logo = styled.label`
-  width: ${props => (props.isOpened ? "220px" : "0px")};
-  height: 56px;
-  display: block;
-  background-color: rgba(0, 0, 0, 0.2);
-  color: #222;
-  font-weight: bold;
-`;
-
-const Nav = styled.div`
-  flex: 1;
-  background-color: black;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: flex-end;
-  & > * {
-    max-width: 200px;
-    margin: 0 8px;
-    border: 1px solid;
-    height: 56px;
-    line-height: 56px;
-    padding: 4px 8px;
-  }
-`;
+// const Nav = styled.div`
+//   flex: 1;
+//   background-color: black;
+//   display: flex;
+//   flex-flow: row nowrap;
+//   align-items: center;
+//   justify-content: flex-end;
+//   & > * {
+//     max-width: 200px;
+//     margin: 0 8px;
+//     border: 1px solid;
+//     height: 56px;
+//     line-height: 56px;
+//     padding: 4px 8px;
+//   }
+// `;
 
 const Sidebar = styled.div`
   min-width: ${props => (props.isOpened ? "220px" : "0")};
   width: ${props => (props.isOpened ? "220px" : "0")};
   height: 100%;
-  background-color: rgba(240, 240, 0, 0.2);
+  // background-color: rgba(240, 240, 0, 0.2);
   display: flex;
   flex-flow: column nowrap;
 `;
@@ -99,9 +89,14 @@ export default class Dash extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      sidebarOpened: true,
+      sidebarOpened: false,
       username: "Username"
     };
+  }
+  toggleSideBar = ()=>{
+    this.setState({
+      sidebarOpened: !this.state.sidebarOpened
+    })
   }
   navigate = selected =>
     this.setState({
@@ -113,26 +108,20 @@ export default class Dash extends React.PureComponent {
       <Root>
         <Router>
           <div>
-            <Navbar>
+            <Navbar className="" title= "Manly with Mazen" sidebarAction={this.toggleSideBar}>
               {(this.state.sidebarOpened) ? <Logo isOpened={this.state.sidebarOpened}>{this.props.logo}</Logo> : ""}
-              <a
-                className="no-underline grow pa3 br2 bg-grey white "
-                onClick={() =>
-                  this.setState({
-                    sidebarOpened: !this.state.sidebarOpened
-                  })
-                }
-              >
-                ☰
-              </a>
-              <Nav>
+              
+              
+              {/* <Nav>
                 <label style={{ color: "white" }} onClick={() => alert(1)}>
                   {this.state.username}
                 </label>
-              </Nav>
+              </Nav> */}
             </Navbar>
-            <Container>
+            <Container className="bg-silver">
               <Sidebar
+              style={{zIndex :3, position:"absolute", minHeight:"800 px"}}
+              className= "bg-silver"
                 isOpened={this.state.sidebarOpened}
                 navigate={this.navigate}
               >
@@ -140,17 +129,17 @@ export default class Dash extends React.PureComponent {
                   ? ""
                   : this.props.routes.map(
                     route =>
-                      route.label === "Preview" ? (
-                        ""
-                      ) : (
-                          // <SidebarItem key={route.label}>
-                          //   <Link to={route.path}><a class="no-underline white mr3 mb3" >{route.label}</a></Link>
-                          // </SidebarItem>
-                          <Link class="no-underline white" to={route.path}> <SidebarItem>{route.label}</SidebarItem> </Link>
-                        )
+                    route.label === "Preview" ? (
+                      ""
+                    ) : (
+                      // <SidebarItem key={route.label}>
+                      //   <Link to={route.path}><a class="no-underline white mr3 mb3" >{route.label}</a></Link>
+                      // </SidebarItem>
+                      <Link class="no-underline white" to={route.path} onClick={this.toggleSideBar}> <SidebarItem>{route.label}</SidebarItem> </Link>
+                    )
                   )}
               </Sidebar>
-              <Content>
+              <Content style={{width: "100%", position:"absolute"}}>
                 <Switch>
                   <Route exact path="/" render={() => (
                     <Redirect to="/home-page" />

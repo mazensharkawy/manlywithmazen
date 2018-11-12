@@ -28,6 +28,16 @@
       "assignedTo": {
         "name": "Mazen Sharkawy"
       },
+      "creation_time": "2018-11-06T13:37:12.415Z",
+      "id": "7",
+      "prio": 2,
+      "references": [],
+      "title": "customize scroll bar"
+    },
+    {
+      "assignedTo": {
+        "name": "Mazen Sharkawy"
+      },
       "creation_time": "2018-11-06T13:35:55.278Z",
       "id": "4",
       "prio": 2,
@@ -71,11 +81,11 @@
       "assignedTo": {
         "name": "Mazen Sharkawy"
       },
-      "creation_time": "2018-11-06T13:37:12.415Z",
-      "id": "7",
-      "prio": 2,
+      "creation_time": "2018-11-10T21:40:50.193Z",
+      "id": "8",
+      "prio": 5,
       "references": [],
-      "title": "customize scroll bar"
+      "title": "mobile first approach"
     }
   ]
 }

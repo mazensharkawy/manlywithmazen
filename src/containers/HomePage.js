@@ -1,6 +1,8 @@
 import React from "react";
 import t from "prop-types";
 import Scroll from "../components/Scroll";
+import VideoCard from "../components/VideoCard"
+import Preview from "./Preview";
 class HomePage extends React.PureComponent {
   render() {
     const trailer = {
@@ -14,19 +16,11 @@ class HomePage extends React.PureComponent {
           allowfullscreen
         />
       ),
-      name: "ايه اللي جابك هنا ؟"
+      name: "ايه اللي جابك هنا ؟",
+      videoId: "gNER-Bwlzx8"
     };
     return (
-      <Scroll>
-        <div className="tc grow bg-silver br3 pa3 ma2 dib bw2 shadow-5">
-          {/* <img style={{ maxHeight: "250px" }} alt="robots" src={img} /> */}
-
-          <div>
-            <h2>{trailer.name}</h2>
-          </div>
-          {trailer.embed}
-        </div>
-      </Scroll>
+      <Preview></Preview>
     );
   }
 }
