@@ -28,6 +28,16 @@
       "assignedTo": {
         "name": "Mazen Sharkawy"
       },
+      "creation_time": "2018-11-10T21:40:50.193Z",
+      "id": "8",
+      "prio": 5,
+      "references": [],
+      "title": "mobile first approach"
+    },
+    {
+      "assignedTo": {
+        "name": "Mazen Sharkawy"
+      },
       "creation_time": "2018-11-06T13:37:12.415Z",
       "id": "7",
       "prio": 2,
@@ -68,6 +78,15 @@
       "assignedTo": {
         "name": "Mazen Sharkawy"
       },
+      "creation_time": "2018-11-12T15:24:07.534Z",
+      "id": "10",
+      "references": [],
+      "title": "modularize reading booster"
+    },
+    {
+      "assignedTo": {
+        "name": "Mazen Sharkawy"
+      },
       "creation_time": "2018-11-06T12:21:47.149Z",
       "description": {
         "content": "Push notifications when a new video is posted.\nMaybe Track unwatched videos to notify logged in users",
@@ -81,11 +100,27 @@
       "assignedTo": {
         "name": "Mazen Sharkawy"
       },
-      "creation_time": "2018-11-10T21:40:50.193Z",
-      "id": "8",
-      "prio": 5,
+      "creation_time": "2018-11-12T15:23:43.015Z",
+      "description": {
+        "content": "Manage state using redux",
+        "mime": "text/markdown"
+      },
+      "id": "9",
       "references": [],
-      "title": "mobile first approach"
+      "title": "Redux"
+    },
+    {
+      "assignedTo": {
+        "name": "Mazen Sharkawy"
+      },
+      "creation_time": "2018-11-12T22:37:28.333Z",
+      "description": {
+        "content": "change the website icon that appears up in the tab",
+        "mime": "text/markdown"
+      },
+      "id": "11",
+      "references": [],
+      "title": "change icon"
     }
   ]
 }
