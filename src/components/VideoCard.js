@@ -38,7 +38,7 @@ class VideoCard extends React.PureComponent {
         <img
           onClick={this.handleOnClick}
           style={{ maxHeight: (this.props.height) ? this.props.height : "250px" }}
-          alt="robots"
+          alt="Cool video"
           src={img}
         />
         <div>
