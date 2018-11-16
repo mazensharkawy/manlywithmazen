@@ -115,6 +115,19 @@
       "assignedTo": {
         "name": "Mazen Sharkawy"
       },
+      "creation_time": "2018-11-16T16:02:52.577Z",
+      "description": {
+        "content": "add a vibrant bright border line to the bottom of the navbar",
+        "mime": "text/markdown"
+      },
+      "id": "12",
+      "references": [],
+      "title": "NAVBAR border line"
+    },
+    {
+      "assignedTo": {
+        "name": "Mazen Sharkawy"
+      },
       "creation_time": "2018-11-06T12:21:47.149Z",
       "description": {
         "content": "Push notifications when a new video is posted.\nMaybe Track unwatched videos to notify logged in users",
@@ -128,14 +141,15 @@
       "assignedTo": {
         "name": "Mazen Sharkawy"
       },
-      "creation_time": "2018-11-16T16:02:52.577Z",
+      "creation_time": "2018-11-16T16:28:11.967Z",
       "description": {
-        "content": "add a vibrant bright border line to the bottom of the navbar",
+        "content": "change website title Manly with mazen to an image to ensure proper display across devices",
         "mime": "text/markdown"
       },
-      "id": "12",
+      "id": "13",
+      "prio": 1,
       "references": [],
-      "title": "NAVBAR border line"
+      "title": "change title to image"
     }
   ]
 }
