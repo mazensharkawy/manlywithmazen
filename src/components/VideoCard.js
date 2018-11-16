@@ -31,13 +31,13 @@ class VideoCard extends React.PureComponent {
     }
     return (
       <div
-        style={{ maxWidth: "500px" }}
-        className="tc grow bg-silver br3 pa3 ma2 dib bw2 shadow-5"
+        style={{ maxWidth: "400px" }}
+        className="tc grow bg-white br3 pa1 ma2 dib bw2 shadow-5"
         onClick={this.handleOnClick}
       >
         <img
           onClick={this.handleOnClick}
-          style={{ maxHeight: (this.props.height) ? this.props.height : "250px" }}
+          style={{ maxHeight: this.props.height ? this.props.height : "250px" }}
           alt="Cool video"
           src={img}
         />

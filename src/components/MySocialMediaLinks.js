@@ -5,10 +5,10 @@ import styled from "styled-components";
 const HomeSocial = styled.ul`
   font-family: sans-serif;
   list-style: none;
-  margin: 0;
+  // margin: 0;
   position: absolute;
   top: 40%;
-  right: 6.4rem;
+  left: 6.4rem;
   list-style-type: none;
   -webkit-transform: translate3d(0, -50%, 0);
   -ms-transform: translate3d(0, -50%, 0);
@@ -22,7 +22,7 @@ const Link = styled.a`
 `;
 
 const List = styled.li`
-  position: relative;
+  // position: relative;
   padding: 0.9rem 0;
 `;
 
@@ -38,7 +38,7 @@ const MySocialMediaLinks = ({}) => {
         >
           <svg
             class="dib h2 w2"
-            fill="currentColor"
+            fill="#4267b2"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 16 16"
             fill-rule="evenodd"
@@ -65,7 +65,7 @@ const MySocialMediaLinks = ({}) => {
         >
           <svg
             class="dib h2 w2"
-            fill="currentColor"
+            fill="orange"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 16 16"
             fill-rule="evenodd"
@@ -89,7 +89,7 @@ const MySocialMediaLinks = ({}) => {
         >
           <svg
             class="dib w2 h2"
-            fill="currentColor"
+            fill="red"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 16 16"
             fill-rule="evenodd"

@@ -20,7 +20,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Dashboard routes={routes} logo="Manly with Mazen" />;
+        <Dashboard routes={routes} logo="Manly with Mazen" />
       </div>
     );
   }

@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import styled from "styled-components";
 import { Redirect } from "react-router";
 import Navbar from "../components/Navbar";
-import Scroll from "../components/Scroll";
 
 const SidebarItem = styled.li`
     height: 50px;
@@ -94,6 +93,12 @@ export default class Dash extends React.PureComponent {
               className=""
               title="Manly with Mazen"
               sidebarAction={this.toggleSideBar}
+              style={{
+                width: "1000px",
+                zIndex: 3,
+                position: "absolute",
+                top: "0em"
+              }}
             >
               {this.state.sidebarOpened ? (
                 <Logo isOpened={this.state.sidebarOpened}>
@@ -103,11 +108,36 @@ export default class Dash extends React.PureComponent {
                 ""
               )}
             </Navbar>
+            {/* <a
+              className="no-underline grow pa3 bg-grey white "
+              onClick={this.props.sidebarAction}
+              style={{
+                zIndex: 3,
+                position: "absolute",
+                color: "#77cc6d",
+                top: "1em",
+                left: "1em"
+              }}
+              onClick={this.toggleSideBar}
+            >
+              <h1 class="f5 lh-copy">☰ MENU</h1>
+            </a> */}
+
             <Container>
+              {/* <h1
+                className="center"
+                style={{
+                  fontFamily: "Brush Script MT, Brush Script Std, cursive",
+                  color: "Black",
+                  position: "relative",
+                  zIndex: 3
+                }}
+                onClick={() => (window.location.href = "../home-page")}
+              >
+                Manly with Mazen
+              </h1> */}
               <Sidebar
                 style={{ zIndex: 3, position: "absolute", minHeight: "800 px" }}
-                // className="bg-silver"
-
                 isOpened={this.state.sidebarOpened}
                 navigate={this.navigate}
               >
@@ -118,8 +148,8 @@ export default class Dash extends React.PureComponent {
                     <a onClick={this.toggleSideBar}>
                       <h1
                         // style={{ right: "1rem", marginBottom: "20px" }}
-                        style={{ marginLeft: "80%" }}
-                        class="f5 lh-copy white"
+                        style={{ marginLeft: "80%", color: "#77cc6d" }}
+                        class="f5 lh-copy "
                       >
                         X
                       </h1>
@@ -133,7 +163,8 @@ export default class Dash extends React.PureComponent {
                         ""
                       ) : (
                         <Link
-                          class="no-underline white mt3 grow dim"
+                          style={{ color: "#77cc6d" }}
+                          class="no-underline mt3 grow dim"
                           to={route.path}
                           onClick={this.toggleSideBar}
                         >
@@ -157,9 +188,7 @@ export default class Dash extends React.PureComponent {
                       key={route.key}
                       {...route}
                       path={route.path}
-                      render={() => (
-                          <route.component {...this.props} />
-                      )}
+                      render={() => <route.component {...this.props} />}
                     />
                   ))}
                 </Switch>
