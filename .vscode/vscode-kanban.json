@@ -19,10 +19,44 @@
       "prio": 2,
       "references": [],
       "title": "redirect to hompage"
+    },
+    {
+      "assignedTo": {
+        "name": "Mazen Sharkawy"
+      },
+      "creation_time": "2018-11-12T15:23:43.015Z",
+      "description": {
+        "content": "Manage state using redux",
+        "mime": "text/markdown"
+      },
+      "id": "9",
+      "references": [],
+      "title": "Redux"
     }
   ],
-  "in-progress": [],
-  "testing": [],
+  "in-progress": [
+    {
+      "assignedTo": {
+        "name": "Mazen Sharkawy"
+      },
+      "creation_time": "2018-11-12T15:24:07.534Z",
+      "id": "10",
+      "references": [],
+      "title": "modularize reading booster"
+    }
+  ],
+  "testing": [
+    {
+      "assignedTo": {
+        "name": "Mazen Sharkawy"
+      },
+      "creation_time": "2018-11-06T13:37:12.415Z",
+      "id": "7",
+      "prio": 2,
+      "references": [],
+      "title": "customize scroll bar"
+    }
+  ],
   "todo": [
     {
       "assignedTo": {
@@ -33,16 +67,6 @@
       "prio": 5,
       "references": [],
       "title": "mobile first approach"
-    },
-    {
-      "assignedTo": {
-        "name": "Mazen Sharkawy"
-      },
-      "creation_time": "2018-11-06T13:37:12.415Z",
-      "id": "7",
-      "prio": 2,
-      "references": [],
-      "title": "customize scroll bar"
     },
     {
       "assignedTo": {
@@ -78,10 +102,14 @@
       "assignedTo": {
         "name": "Mazen Sharkawy"
       },
-      "creation_time": "2018-11-12T15:24:07.534Z",
-      "id": "10",
+      "creation_time": "2018-11-12T22:37:28.333Z",
+      "description": {
+        "content": "change the website icon that appears up in the tab",
+        "mime": "text/markdown"
+      },
+      "id": "11",
       "references": [],
-      "title": "modularize reading booster"
+      "title": "change icon"
     },
     {
       "assignedTo": {
@@ -100,27 +128,14 @@
       "assignedTo": {
         "name": "Mazen Sharkawy"
       },
-      "creation_time": "2018-11-12T15:23:43.015Z",
+      "creation_time": "2018-11-16T16:02:52.577Z",
       "description": {
-        "content": "Manage state using redux",
+        "content": "add a vibrant bright border line to the bottom of the navbar",
         "mime": "text/markdown"
       },
-      "id": "9",
+      "id": "12",
       "references": [],
-      "title": "Redux"
-    },
-    {
-      "assignedTo": {
-        "name": "Mazen Sharkawy"
-      },
-      "creation_time": "2018-11-12T22:37:28.333Z",
-      "description": {
-        "content": "change the website icon that appears up in the tab",
-        "mime": "text/markdown"
-      },
-      "id": "11",
-      "references": [],
-      "title": "change icon"
+      "title": "NAVBAR border line"
     }
   ]
 }

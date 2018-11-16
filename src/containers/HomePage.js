@@ -1,7 +1,8 @@
 import React from "react";
 import t from "prop-types";
 import Scroll from "../components/Scroll";
-import VideoCard from "../components/VideoCard"
+import VideoCard from "../components/VideoCard";
+import Background from "../components/Background";
 import Preview from "./Preview";
 class HomePage extends React.PureComponent {
   render() {
@@ -20,7 +21,19 @@ class HomePage extends React.PureComponent {
       videoId: "gNER-Bwlzx8"
     };
     return (
-      <Preview></Preview>
+      // <React.Fragment>
+      <Scroll>
+        <Preview />
+        {/* <Background image="clock" /> */}
+        {/* <div className="dib">
+          <h1>HELLO FROM THE OTHER SIDE</h1>
+          <h1>HELLO FROM THE OTHER SIDE</h1>
+          <h1>HELLO FROM THE OTHER SIDE</h1>
+          <h1>HELLO FROM THE OTHER SIDE</h1>
+          <h1>HELLO FROM THE OTHER SIDE</h1>
+        </div> */}
+      </Scroll>
+      // </React.Fragment>
     );
   }
 }

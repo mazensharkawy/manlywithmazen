@@ -3,15 +3,18 @@ import t from "prop-types";
 import Card from "../components/Card";
 import Scroll from "../components/Scroll";
 import NumberInputCard from "../components/NumberInputCard";
+
 import {
   changeSeconds,
   incrementSecondsPerPage,
   incrementCurrentPage,
   toggleTimerState,
   decrementTimerSeconds,
-  resetSecondsTimer
+  resetSecondsTimer,
+  changeCurrentPage
 } from "../sdk/actions";
 import { connect } from "react-redux";
+import Background from "../components/Background";
 
 const mapStateToProps = state => {
   return {
@@ -24,6 +27,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => ({
   onSecondsChange: event => dispatch(changeSeconds(event.target.value)),
+  onPagesChange: event => dispatch(changeCurrentPage(event.target.value)),
   onIncrementSecondsPerPage: i => dispatch(incrementSecondsPerPage(i)),
   incrementCurrentPage: i => dispatch(incrementCurrentPage(i)),
   toggleTimerState: () => dispatch(toggleTimerState()),
@@ -60,11 +64,13 @@ class ReadingBooster extends React.PureComponent {
       currentPage,
       onIncrementSecondsPerPage,
       incrementCurrentPage,
-      currentTimerSeconds
+      currentTimerSeconds,
+      onPagesChange
     } = this.props;
     return (
-      <div style={{ minHeight: "800px" }}>
-        <div className="fl w-100">
+      <Scroll>
+        <Background image="clock" />
+        <div style={{ position: "relative" }} className="">
           <NumberInputCard
             title="Seconds Per Page"
             value={secondsPerPage}
@@ -79,12 +85,12 @@ class ReadingBooster extends React.PureComponent {
           <NumberInputCard
             title="Current Page"
             value={currentPage}
-            onChange={onSecondsChange}
+            onChange={onPagesChange}
             increment={i => incrementCurrentPage(i)}
           />
         </div>
 
-        <div className="fl w-100 ma4">
+        <div className="ma4">
           {!this.props.isRunning ? (
             <div
               className="tc grow bg-blue br3 pa3 ma2 dib bw2 white shadow-5"
@@ -104,7 +110,7 @@ class ReadingBooster extends React.PureComponent {
             </div>
           )}
         </div>
-      </div>
+      </Scroll>
     );
   }
 }

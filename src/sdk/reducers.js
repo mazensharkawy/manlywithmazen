@@ -39,7 +39,7 @@ export const readingBoosterReducer = (state = initialState, action = {}) => {
     case RESET_SECONDS_TIMER:
       return { ...state, currentTimerSeconds: state.secondsPerPage };
     case CHANGE_PAGE:
-      return { ...state, secondsPerPage: Math.max(1, Number(action.payload)) };
+      return { ...state, currentPage: Math.max(1, Number(action.payload)) };
     case TOGGLE_TIMER_STATE:
       return { ...state, isRunning: !state.isRunning };
     default:

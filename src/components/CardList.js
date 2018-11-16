@@ -1,12 +1,12 @@
 import React from "react";
 import VideoCard from "./VideoCard";
-
+import Scroll from "../components/Scroll";
+// import Background from "../components/Background";
 const CardList = ({ videosList }) => {
   return (
-    <div
-      style={{ marginBottom: "20px" }}
-    >
-      {/* <p>{videosList.length}</p> */}
+    // <Scroll>
+    <div style={{ marginBottom: "230px" }}>
+      {/* <React.Fragment> */}
       {videosList.map((video, i) => {
         return (
           <VideoCard
@@ -21,7 +21,9 @@ const CardList = ({ videosList }) => {
           />
         );
       })}
+      {/* </React.Fragment> */}
     </div>
+    // </Scroll>
   );
 };
 
