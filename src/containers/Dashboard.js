@@ -10,9 +10,8 @@ const SidebarItem = styled.li`
     display:block;
     width:100%:
     padding: 8px 16px;
-    // border-bottom:1px solid;
     cursor: pointer;
-    // background-color: #0c0c0c;
+    
 `;
 const Root = styled.div`
   position: fixed;
@@ -46,7 +45,7 @@ const Sidebar = styled.div`
   width: ${props => (props.isOpened ? "220px" : "0")};
   height: 100%;
   // background-color: rgba(240, 240, 0, 0.2);
-  background-color: #000000;
+  background-color: white;
   display: flex;
   flex-flow: column nowrap;
 `;
@@ -148,7 +147,11 @@ export default class Dash extends React.PureComponent {
                     <a onClick={this.toggleSideBar}>
                       <h1
                         // style={{ right: "1rem", marginBottom: "20px" }}
-                        style={{ marginLeft: "80%", color: "#77cc6d" }}
+                        style={{
+                          cursor: "pointer",
+                          marginLeft: "80%",
+                          color: "black"
+                        }}
                         class="f5 lh-copy "
                       >
                         X
@@ -163,7 +166,7 @@ export default class Dash extends React.PureComponent {
                         ""
                       ) : (
                         <Link
-                          style={{ color: "#77cc6d" }}
+                          style={{ color: "black" }}
                           class="no-underline mt3 grow dim"
                           to={route.path}
                           onClick={this.toggleSideBar}

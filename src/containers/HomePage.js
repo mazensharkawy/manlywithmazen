@@ -31,7 +31,7 @@ class HomePage extends React.PureComponent {
       <React.Fragment>
         <Background />
         <div
-          className="bg-white dib"
+          className="bg-white dib shadow-5"
           style={{
             display: "flex",
             position: "relative",
@@ -91,7 +91,6 @@ class HomePage extends React.PureComponent {
             </div>
           </div>
         </div>
-        <br />
 
         {/* // </Scroll> */}
         {/* </Scroll> */}

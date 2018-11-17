@@ -29,7 +29,8 @@ class Navbar extends React.PureComponent {
           className="center"
           style={{
             fontFamily: "Brush Script MT, Brush Script Std, cursive",
-            color: "black"
+            color: "black",
+            cursor: "pointer"
           }}
           onClick={() => (window.location.href = "../home-page")}
         >

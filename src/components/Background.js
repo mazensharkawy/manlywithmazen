@@ -1,22 +1,9 @@
 import React from "react";
 import t from "prop-types";
-import fashion from "../resources/blueGradient.jpg";
-import clock from "../resources/clock.jpg";
+import background from "../resources/blueGradient.jpg";
 
 class Background extends React.PureComponent {
   render() {
-    var background = "";
-    switch (this.props.image) {
-      // case "fashion":
-      //   background = fashion;
-      //   break;
-      // case "clock":
-      //   background = clock;
-      //   break;
-      default:
-        background = fashion;
-        break;
-    }
     return (
       // <div
       //   style={{
